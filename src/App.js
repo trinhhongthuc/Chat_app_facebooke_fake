@@ -1,10 +1,9 @@
-import Login from "./components/login/Login";
+import ContainerLogin from "containers/login/ContainerLogin";
 
 function App() {
   return (
     <div className="App">
-      <h1> Welcome to facebook fake</h1>
-      <Login></Login>
+      <ContainerLogin />
     </div>
   );
 }

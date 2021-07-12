@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { DivWrapper, Form, Input } from "./style.js";
 import Button from "../button/Button.jsx";
+import { BorderBottom, WrapperButton } from "components/button/style.js";
 // #region constants
 
 // #endregion
@@ -28,14 +29,33 @@ const Login = () => {
     <>
       <Form>
         <DivWrapper>
-          <Input placeholder="Email hoặc số điện thoại" required />
+          <Input type="email" placeholder="Email hoặc số điện thoại" required />
         </DivWrapper>
 
         <DivWrapper>
-          <Input placeholder="Enter Password" required />
+          <Input type="password" placeholder="Enter Password" required />
         </DivWrapper>
 
-        <Button title="Đăng nhập" background="#166fe5" font-size="18px" />
+        <Button
+          title="Đăng nhập"
+          background="#166fe5"
+          backgroundHover="#365899"
+          fontSize="18px"
+          width="100%"
+          color="#fff"
+        />
+
+        <BorderBottom />
+        <WrapperButton>
+          <Button
+            title="Tạo tài khoản mới"
+            background="#36A420"
+            backgroundHover="#298a16"
+            fontSize="18px"
+            width="auto"
+            color="#fff"
+          />
+        </WrapperButton>
       </Form>
     </>
   );

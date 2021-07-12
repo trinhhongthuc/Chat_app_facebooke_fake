@@ -23,9 +23,22 @@ const defaultProps = {};
 /**
  *
  */
-const Button = ({ title, background, fontSize }) => {
+const Button = ({
+  title,
+  background,
+  fontSize,
+  width,
+  color,
+  backgroundHover,
+}) => {
   return (
-    <Buttons background={background} fontSize={fontSize}>
+    <Buttons
+      background={background}
+      fontSize={fontSize}
+      width={width}
+      color={color}
+      backgroundHover={backgroundHover}
+    >
       {title}
     </Buttons>
   );
