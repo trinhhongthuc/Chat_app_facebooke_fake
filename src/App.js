@@ -1,4 +1,5 @@
 import Header from "components/header/Header";
+import Home from "containers/home/Home";
 import ContainerLogin from "containers/login/ContainerLogin";
 import ContainerRegister from "containers/register/ContainerRegister";
 
@@ -8,9 +9,10 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
-          <Route path="/" component={Header} />
-          <Route exact path="/home" component={Header} />
+          <Route path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
         </Switch>
       </Router>
       {/* <ContainerLogin /> */}
