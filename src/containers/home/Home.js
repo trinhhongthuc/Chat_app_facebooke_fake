@@ -5,6 +5,9 @@ import { ContentHome, WrapperContentCenter } from "./style";
 import NavbarLeft from "components/navbarLeft/NavbarLeft";
 import BoxWrite from "components/boxWrite/BoxWrite";
 import Post from "components/post/Post";
+import Contact from "components/contact/Contact";
+import FormNewPost from "components/formCreateNewPost/FormNewPost";
+import ChatMessage from "components/chatMessage/ChatMessage";
 
 // #region constants
 
@@ -28,13 +31,34 @@ const defaultProps = {};
  */
 const Home = () => {
   return (
-    <ContentHome>
-      <NavbarLeft></NavbarLeft>
-      <WrapperContentCenter>
-        <BoxWrite></BoxWrite>
-        <Post></Post>
-      </WrapperContentCenter>
-    </ContentHome>
+    <>
+      <ContentHome>
+        {/* <FormNewPost></FormNewPost> */}
+
+        {/*Navbar Left  */}
+        <NavbarLeft></NavbarLeft>
+
+        {/* Content */}
+        <WrapperContentCenter>
+          <BoxWrite></BoxWrite>
+          <Post></Post>
+
+          <Post></Post>
+
+          <Post></Post>
+
+          <Post></Post>
+
+          <Post></Post>
+
+          <Post></Post>
+        </WrapperContentCenter>
+
+        {/* Contact */}
+        <Contact></Contact>
+      </ContentHome>
+      {/* <ChatMessage></ChatMessage> */}
+    </>
   );
 };
 

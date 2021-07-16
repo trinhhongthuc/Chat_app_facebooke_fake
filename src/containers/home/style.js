@@ -7,7 +7,14 @@ export const ContentHome = styled.div`
 `;
 
 export const WrapperContentCenter = styled.div`
-  width: 40%;
-  // margin-left: 30%;
+  width: 60%;
+  padding: 0 10%;
   padding-top: 18px;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
+
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;

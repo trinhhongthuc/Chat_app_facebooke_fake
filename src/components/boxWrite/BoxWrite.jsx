@@ -1,6 +1,4 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
+import React, { useState, useCallback } from "react";
 import {
   BoxInput,
   BoxWriteImg,
@@ -14,69 +12,57 @@ import {
 
 import img from "../../assets/logo.png";
 
-//icon
-
 import { BiImageAdd } from "react-icons/bi";
+import FormNewPost from "components/formCreateNewPost/FormNewPost";
 
-// #region constants
-
-// #endregion
-
-// #region styled-components
-
-// #endregion
-
-// #region functions
-
-// #endregion
-
-// #region component
-const propTypes = {};
-
-const defaultProps = {};
-
-/**
- *
- */
 const BoxWrite = () => {
+  const [hidden, setHidden] = useState(false);
+
+  const OnClickInput = useCallback(() => {
+    setHidden(true);
+  }, []);
+
   return (
-    <WrapperBoxWriter>
-      <WrapperFelling>
-        <BoxWriteImg src={img} alt="img" />
-        <BoxInput placeholder="Bạn đang nghĩ gì?" />
-      </WrapperFelling>
+    <>
+      <WrapperBoxWriter>
+        <WrapperFelling>
+          <BoxWriteImg src={img} alt="img" />
+          <BoxInput
+            placeholder="Bạn đang nghĩ gì?"
+            onClick={() => OnClickInput()}
+          />
+        </WrapperFelling>
 
-      <WrapperBoxWriterOption>
-        <OptionPost>
-          <OptionPostIcons color="#44B45F">
-            <BiImageAdd />
-          </OptionPostIcons>
+        <WrapperBoxWriterOption>
+          <OptionPost>
+            <OptionPostIcons color="#44B45F">
+              <BiImageAdd />
+            </OptionPostIcons>
 
-          <OptionPostName>Anh/Video</OptionPostName>
-        </OptionPost>
+            <OptionPostName>Anh/Video</OptionPostName>
+          </OptionPost>
 
-        <OptionPost>
-          <OptionPostIcons color="#44B45F">
-            <BiImageAdd />
-          </OptionPostIcons>
+          <OptionPost>
+            <OptionPostIcons color="#44B45F">
+              <BiImageAdd />
+            </OptionPostIcons>
 
-          <OptionPostName>Anh/Video</OptionPostName>
-        </OptionPost>
+            <OptionPostName>Anh/Video</OptionPostName>
+          </OptionPost>
 
-        <OptionPost>
-          <OptionPostIcons color="#44B45F">
-            <BiImageAdd />
-          </OptionPostIcons>
+          <OptionPost>
+            <OptionPostIcons color="#44B45F">
+              <BiImageAdd />
+            </OptionPostIcons>
 
-          <OptionPostName>Anh/Video</OptionPostName>
-        </OptionPost>
-      </WrapperBoxWriterOption>
-    </WrapperBoxWriter>
+            <OptionPostName>Anh/Video</OptionPostName>
+          </OptionPost>
+        </WrapperBoxWriterOption>
+      </WrapperBoxWriter>
+
+      {hidden ? <FormNewPost setHidden={setHidden}></FormNewPost> : ""}
+    </>
   );
 };
-
-BoxWrite.propTypes = propTypes;
-BoxWrite.defaultProps = defaultProps;
-// #endregion
 
 export default BoxWrite;

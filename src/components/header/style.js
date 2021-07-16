@@ -1,14 +1,18 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-export const Headers = styled.header`
+export const Headers = styled.div`
   width: 100%;
   height: 60px;
+
   display: flex;
   align-items: center;
   background: #fff;
-  //   justify-content: space-between;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
   padding: 10px;
+
+  z-index: 1000;
+  position: fixed;
+  top: 0;
 `;
 
 export const WrapperLeft = styled.div`

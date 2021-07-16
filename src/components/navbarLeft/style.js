@@ -2,11 +2,17 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const ContentLeft = styled.div`
-  width: 30%;
+  width: 20%;
   padding: 20px 18px;
-  // position: fixed;
-  // left: 0;
   background: #f0f2f5;
+  height: calc(100vh -60px);
+
+  overflow-y: scroll;
+  margin-top: 60px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const NavContentLeft = styled(Link)`

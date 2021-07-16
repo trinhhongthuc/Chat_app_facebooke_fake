@@ -1,4 +1,4 @@
-import Header from "components/header/Header";
+import Header from "components/header/Header.jsx";
 import Home from "containers/home/Home";
 import ContainerLogin from "containers/login/ContainerLogin";
 import ContainerRegister from "containers/register/ContainerRegister";

@@ -66,7 +66,6 @@ const Header = () => {
           <InputSearch type="text" placeholder="Tim kiem tren facebook" />
         </WrapperLeftSearch>
       </WrapperLeft>
-
       <WrapperCenter>
         <WrapperIconCenter to="/home">
           <BiHome />
@@ -84,7 +83,6 @@ const Header = () => {
           <HiUserGroup />
         </WrapperIconCenter>
       </WrapperCenter>
-
       <WrapperRight>
         <Information>
           <Avatar src={logo} alt={logo} />
