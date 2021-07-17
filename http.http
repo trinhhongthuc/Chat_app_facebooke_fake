@@ -1,0 +1,16 @@
+###
+POST http://localhost:5500/user/register
+Content-Type: application/json
+
+{
+    "lastName": "thuc",
+    "userName": "thuc123",
+    "email": "thuc1223@gmail.com",
+    "password": "thuc123",
+    "ngaySinh": "12/12/1999",
+    "gioiTinh": "nam"
+
+}
+
+###
+GET  http://localhost:5500/user/
